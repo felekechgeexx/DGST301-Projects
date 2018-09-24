@@ -25,9 +25,9 @@ for word,pos in blob.tags:
     if (pos == 'NN'):
         nouns.append(word)
 
-# This will generate a thirty-line poem using randomly paired adjectives.
+# This will generate a twenty-line poem using randomly paired adjectives.
 # attached with a noun that is randomly generated five times and prints its pairs
-for i in range(30):
+for i in range(20):
     a = random.choice(adjectives)
     n = random.choice(nouns)
     print(a,n)   
