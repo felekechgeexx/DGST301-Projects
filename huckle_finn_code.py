@@ -8,15 +8,18 @@ from textblob import TextBlob
 # The text file's contents are stored in the variable "text"
 with open('hucklefinn.txt', 'r') as file:
     text = file.read()
+    print ("") 
     
 # This converts the file contents into TextBlob called 
 blob = TextBlob(text)
-
+    print ("")
+    
 # This creates a list of adjectives and nouns and verbs
 adjectives = []
 nouns = []
 verbs = []
-
+    print ("")
+    
 # This uses TextBlob to read through the whole text and check fo adjectives, nouns, and verbs
 # and then adds them to the appropriate list. 
 for word,pos in blob.tags:
@@ -27,7 +30,8 @@ for word,pos in blob.tags:
         nouns.append(word)
     if (pos == 'VB'):
         verbs.append(word)
-
+    print ("")
+    
 # This will generate a twenty-line poem using randomly paired adjectives.
 # attached with a noun that is randomly generated five times and prints its pairs
 for i in range(20):
@@ -38,5 +42,6 @@ for i in range(20):
     n3 = random.choice(nouns)
     vb = random.choice(verbs)    
     print(n1 + " " + a1 + " " +  vb  + " " + a2  + " " + n3) 
+    print ("THANK YOU")
     
     
